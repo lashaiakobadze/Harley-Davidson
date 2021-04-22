@@ -6,8 +6,6 @@
     border: none;
 }
 
-/* 992, 576, 320*/
-
 li {
     list-style: none;
 }
@@ -33,7 +31,6 @@ body {
     margin: auto;
 }
 
-
 /* Header */
 .section-header {
     background-color: #290000;
@@ -48,7 +45,8 @@ body {
 }
 
 .header_logo {
-    width: 180px;
+    width: 220px;
+    height: 40px;
     background-color: transparent;
     color: #fff;
     background-size: cover;
@@ -129,7 +127,6 @@ body {
     font-size: 13px;
     line-height: 17px;
     font-weight: 100;
-
     text-align: left;
     overflow: hidden;
     color: #979797;
@@ -139,25 +136,28 @@ body {
     height: 380px;
     width: 380px;
     border-radius: 50%;
-    border: 20px solid #6b6b6b;
+    border: 20px solid rgb(187, 63, 18);
     background-color: #333333;
 }
 
-.slide_info_button {
-    width: 50%;
-    font-size: 17px;
+.slide_info_button {   
+    width: 140px; 
+    font-size: 13px;
     padding: 10px;
     border-radius: 8px;
+    font-weight: 100;
     color: #fff;
     background-color: #76c38f;
     cursor: pointer;
     display: flex;
     align-items: center;
     transition: color .5s;
+    transition: width .5s;
     white-space: nowrap;
 }
 
 .slide_info_button:hover {
+    width: 100%;
     color: #303030;
 }
 
@@ -172,17 +172,24 @@ body {
 .services-items {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .services-items_item {
     width: 226px;
     height: 306px;
     padding: 21px 34px;
+    cursor: pointer;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    transition: background-color .5s;
+}
+
+.services-items_item:hover {
+    background-color: #76C38F;
 }
 
 .services-items_item_logo {
@@ -196,6 +203,7 @@ body {
     font-weight: 500;
     color: #333333;
     text-align: center;
+    transition: color .5s;
 }
 
 .services-items_item_about {
@@ -204,6 +212,11 @@ body {
     line-height: 15px;
     color: #979797;
     text-align: center;
+    transition: color .5s;
+}
+
+.services-items_item:hover .services-items_item_title,.services-items_item:hover .services-items_item_about {
+    color: #fff;
 }
 
 
@@ -243,6 +256,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
 }
 
 .works-items {
@@ -255,6 +269,7 @@ body {
 
 .works-items_item {
     position: relative;
+    cursor: pointer;
     width: 300px;
     height: 200px;
     border: 5px solid #fff;
@@ -298,12 +313,11 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .info-items_item {
     width: 220px;
-    height: 310px;
-    background-color: #333333;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -328,6 +342,87 @@ body {
     flex-direction: column;
     align-items: flex-start;
 }
+
+.blog {
+    width: 100%;
+}
+
+.blog_title {
+    font-size: 13px;
+    padding-bottom: 11px;
+    color: #76C38F;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 15px;
+}
+
+.blog_address, .blog_date {
+    font-size: 10px;
+    font-weight: 100;
+    color: #979797;
+    padding-bottom: 10px;
+}
+
+.blog_address b {
+    color: #76C38F;
+}
+
+.blog_about {
+    color: #979797;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: left;
+    line-height: 20px;
+}
+
+.blog_info {
+    color: #76C38F;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.links-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.links-items_item {
+    width: 100%;
+    padding: 7px 0;
+    border-bottom: 1px solid #404040;
+    color: #979797;
+}
+
+.links-items_item b {
+    color: #76C38F;
+}
+
+.links-items_item a {
+    color: #76C38F;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.tweets_about {
+    color: #979797;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    font-size: 13px;
+    font-weight: 100;
+    text-align: left;
+    line-height: 20px;
+}
+
+.tweets_about b {
+    color: #76C38F;
+}
+
 
 .form {
     width: 100%;
@@ -359,6 +454,7 @@ body {
 .form_button {
     color: #303030;
     background-color: #76C38F;
+    width: 76px;
     font-size: 15px;
     font-weight: 600;
     padding: 10px;
@@ -367,9 +463,11 @@ body {
     display: flex;
     align-items: center;
     transition: color .5s;
+    transition: width .5s;
 }
 
 .form_button:hover {
+    width: 100%;
     color: #fff;
 }
 
